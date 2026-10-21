@@ -1,0 +1,30 @@
+:root{--bg:#0f2a2e;--panel:#17383d;--ink:#d6e8e1;--mute:#8fb0a7;--lamp:#f2c14e;--moss:#6fa287;--line:#25525a}
+*{box-sizing:border-box}
+body{width:340px;margin:0;padding:16px;background:var(--bg);color:var(--ink);font:14px/1.45 ui-rounded,"Trebuchet MS",system-ui,sans-serif}
+header{display:flex;justify-content:space-between;align-items:center;margin-bottom:14px}
+h1{font:700 18px Georgia,serif;margin:0}
+h2{font:700 15px Georgia,serif;margin:18px 0 8px}
+.streak{background:var(--panel);border:1px solid var(--line);border-radius:999px;padding:3px 10px;color:var(--lamp)}
+.muted{color:var(--mute);font-size:12px}
+.row{display:flex;gap:8px;align-items:baseline}
+#mins{font:700 28px Georgia,serif}
+.bar{height:8px;background:var(--panel);border-radius:4px;overflow:hidden;margin-top:6px}
+#fill{display:block;height:100%;width:0;background:var(--lamp);transition:width .4s}
+.timer{text-align:center;margin-top:16px}
+#clock{font:700 44px Georgia,serif;letter-spacing:1px}
+button{font:inherit;font-weight:700;cursor:pointer;border:0;border-radius:8px;padding:10px 14px;width:100%;background:var(--lamp);color:#1b1500;margin-top:6px}
+button.stop{background:transparent;color:var(--ink);border:1px solid var(--mute)}
+button.ghost{background:var(--panel);color:var(--ink)}
+button:focus-visible,input:focus-visible,textarea:focus-visible,summary:focus-visible{outline:2px solid var(--lamp);outline-offset:2px}
+#map{list-style:none;margin:0;padding:0;border-left:2px dashed var(--line);margin-left:12px}
+#map li{position:relative;padding:4px 0 10px 22px}
+#map li::before{content:"";position:absolute;left:-7px;top:9px;width:12px;height:12px;border-radius:50%;background:var(--bg);border:2px solid var(--line)}
+#map li.open::before{background:var(--moss);border-color:var(--moss)}
+#map li.next::before{border-color:var(--lamp)}
+#map li.locked{opacity:.55}
+details{margin-top:12px;border-top:1px solid var(--line);padding-top:10px}
+summary{cursor:pointer;color:var(--mute)}
+label{display:block;margin-top:10px;font-size:12px;color:var(--mute)}
+textarea,input{width:100%;margin-top:4px;background:var(--panel);color:var(--ink);border:1px solid var(--line);border-radius:6px;padding:6px;font:inherit}
+.two{display:grid;grid-template-columns:1fr 1fr;gap:10px}
+@media (prefers-reduced-motion:reduce){*{transition:none!important}}

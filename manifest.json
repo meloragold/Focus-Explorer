@@ -1,0 +1,13 @@
+{
+  "manifest_version": 3,
+  "name": "Focus Explorer",
+  "version": "1.0.0",
+  "description": "Block distractions, build a daily focus streak, and unlock new regions to explore.",
+  "permissions": ["storage", "alarms", "declarativeNetRequest"],
+  "host_permissions": ["<all_urls>"],
+  "background": { "service_worker": "background.js" },
+  "action": { "default_popup": "popup.html", "default_title": "Focus Explorer" },
+  "web_accessible_resources": [
+    { "resources": ["blocked.html"], "matches": ["<all_urls>"] }
+  ]
+}

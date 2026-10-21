@@ -1,0 +1,31 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8"><link rel="stylesheet" href="popup.css"></head>
+<body>
+  <header>
+    <h1>Focus Explorer</h1>
+    <div class="streak" title="Days in a row you hit your goal"><span id="streak">0</span> day streak</div>
+  </header>
+  <section class="today">
+    <div class="row"><span id="mins">0</span><span class="muted" id="goalLabel"></span></div>
+    <div class="bar"><i id="fill"></i></div>
+  </section>
+  <section class="timer">
+    <div id="clock">25:00</div>
+    <button id="toggle">Start focus session</button>
+    <p class="muted" id="hint"></p>
+  </section>
+  <section>
+    <h2>Your expedition</h2>
+    <ol id="map"></ol>
+  </section>
+  <details>
+    <summary>Settings</summary>
+    <label>Blocked sites (one per line)<textarea id="blocklist" rows="5"></textarea></label>
+    <div class="two">
+      <label>Session (min)<input id="sessionMin" type="number" min="1" max="180"></label>
+      <label>Daily goal (min)<input id="goalMin" type="number" min="1" max="720"></label>
+    </div>
+    <button id="save" class="ghost">Save settings</button>
+  </details>
+  <script src="popup.js"></script>
+</body></html>
